@@ -1,4 +1,4 @@
-/* Begin coding CSS for header of website. No classes/IDs inputted at this time. All subsequent code (unless otherwise specified) is for all viewports. */
+/* Begin coding CSS for header of website. Subsequent code is for small viewports. */
 header {
     background-image: url(../images/LogoSmall.png);
     min-height: 50px;
@@ -6,8 +6,8 @@ header {
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
-    color: #5d675b
-} /* Sets background image properties for header. Color is defined as the background inside the header. */
+    color: #5d675b;
+} /* Sets header properties. Includes background image and specifications. Color is defined as the background inside the header. */
 
 /* ID selector for configuration of website name in header element on homepage. */
 #websitetitle {
@@ -24,7 +24,7 @@ nav a {
     margin: auto;
     background-color: cornsilk;
     text-align: center;
-    width: auto
+    width: auto;
 }
 
 /* Pseudoclasses illustrating link properties for all webpage links. Note that the order of code must've been depicted in this order for the behavior properties of the links to work. Coded using */
@@ -38,7 +38,7 @@ aside {
     text-align: center;
     border-radius: 25px;
     border-style: groove;
-} /* Background color represents the body of where the unordered list in the Classes webpage begins and ends. */
+} /* Background color represents where the unordered list in the Classes webpage begins and ends. Padding displays the horizontal and vertical alignments of how far the background color is shown for that section. Border properties are not solid as indicated by applying a radius. */
 
 body {
     background-color: #d5f4e6;
@@ -62,7 +62,7 @@ main {
 
 .businessname {
     font-size: 1.2em; 
-    font-style: italic
+    font-style: italic;
 } /* Specifes class selector for the business name and applies the following. Note that this only occurs in the main area of each webpage. */
 
 .beigebackground {
@@ -80,29 +80,88 @@ div.grouplist {
     width: 80px;
 } /* Class selector specifying that the trainer headshots are in the form of a circle as opposed to some quadrilateral. */
 
-.concatenation {
-    display: flex;
-} /* Class name indicating that content in the main section is displayed beside the navigation. */
+.gradbackground {
+    background-color: gainsboro;
+    color: indigo;   
+} /* Background of Graduates webpage with given font color. */
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 1px;
+} /* Specifies grid container settings for viewport for the Graduates webpage. */
+    
+.gridcontainer img {
+    width: 100%;
+    height: 100%;
+    display: grid;
+} /* Specifies images for grid on Graduates webpage are to be displayed in a grid format. */
+
+.Grads {
+    text-align: center;
+} /* Title of main area is centered. */
+    
+.squareDogSquad {
+    grid-area: 2 / 1 / 2 / 1;
+} /* Image in Graduates page occupies the 2nd row and 1st column only. */
+    
+.squareSiberian {
+    grid-area: 3 / 1 / 3 / 1; 
+} /* Image in Graduates page occupies the 3rd row and 1st column only. */
+    
+.squareSmartDogs {
+    grid-area: 4 / 1 / 4 / 1;
+} /* Image in Graduates page occupies the 4th row and 1st column only. */
+    
+.squareWhite {
+    grid-area: 5 / 1 / 5 / 1;
+} /* Image in Graduates page occupies the 5th row and 1st column only. */
+    
+.squareMason {
+    grid-area: 6 / 1 / 6 / 1;
+} /* Image in Graduates page occupies the 6th row and 1st column only. */
+    
+.squareCuteSmartDog {
+    grid-area: 7 / 1 / 7 / 1;
+} /* Image in Graduates page occupies the 7th row and 1st column only. */
+    
+.wideFancy {
+    grid-area: 8 / 1 / 8 / 1;
+} /* Image in Graduates page occupies the 8th row and 1st column only. */
+    
+.wideDogHorde {
+    grid-area: 9 / 1 / 9 / 1;
+} /* Image in Graduates page occupies the 9th row and 1st column only. */
+    
+.longOrangeBooks {
+    grid-area: 10 / 1 / 10 / 1;
+} /* Image in Graduates page occupies the 10th row and 1st column only. */
+    
+.squareHappyDog {
+    grid-area: 11 / 1 / 11 / 1;
+} /* Image in Graduates page occupies the 11th row and 1st column only. */
 
 footer {
     text-align: center;
 } /* Footer is aligned in the center. */
 
 /* Begin larger viewing screen viewport specifications only. */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 650px) /* Specifies the constraints of different styling to be applied of a viewport. *//* Specifies the constraints of different styling to be applied of a viewport. */ {
     body {
         background-color: #dceed1;
         color: #030027;
         font-family: Georgia, 'Times New Roman', Times, serif;
-    }
+    } /* Background color of title of website. The color of the text is with a Georgia serif type font. */
     
     header {
         background-color: #618685; 
         color: #d5f4e6;
         background-image: url(../images/LogoLarge.png);
         min-height: 100px;
-    }
+    } /* Sets header properties. Includes background image and specifications. Color is defined as the background inside the header. */
     
+    /* Navigation Link Enhancements in navigation element. */
     nav a {
         font-size: 1.5em;
         flex-direction: column;
@@ -116,93 +175,83 @@ footer {
         padding: 50px;
         border-radius: 25px;
         border-style: groove;
-    }
+    } /* Padding displays the horizontal and vertical alignments of how far the background color is shown for that section. Border properties are not solid as indicated by applying a radius. */
     
     .beigebackground {
         padding: 60px;
-    }
+    } /* Specifies class selector for lists on the Classes webpage. */
     
     .right {
-        width: 95%;
-    }
+        width: 100%;
+    } /* Starts float of unordered list on the Classes webpage. Specifies how wide the list is to be displayed.*/
     
     .clearleft {
         clear: left;
-    }
+    } /* Clears float before footer to indicate stoppage of ordered list. */
     
-    .imagecircles {border-radius: 50%; width: 150px;}
-    
-    figcaption {
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    .concatenation {
-        display: flex;
-        height: 100vh;
-    }
+    .imagecircles {border-radius: 50%; width: 150px;} /* Class selector specifying that the trainer headshots are in the form of a circle as opposed to some quadrilateral. */
     
     .gradbackground {
         background-color: steelblue;
         color: paleturquoise;   
-    }
+    } /* Background of Graduates webpage with given font color. */
     
     .gridcontainer {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto;
         grid-gap: 5px;
-    }
+    } /* Specifies grid container settings for viewport for the Graduates webpage. */
     
     .gridcontainer img {
         width: 100%;
-        height: 100%
+        height: 100%;
         display: grid;
-    }
+    } /* Specifies images for grid on Graduates webpage are to be displayed in a grid format. */
     
     .Grads {
         grid-area: 1 / 1 / 2 / 4;
         text-align: center;
-    }
+    } /* Title of Graduates page is centered and occupies the 1st row to the 2nd row and 2nd column to the 4th column. */
     
     .squareDogSquad {
         grid-area: 2 / 1 / 2 / 1;
-    }
+    } /* Image in Graduates page occupies the 2nd row and 1st column only. */
     
     .squareSiberian {
         grid-area: 2 / 2 / 2 / 2;
-    }
+    } /* Image in Graduates page occupies the 2nd row and 2nd column only. */
     
     .squareSmartDogs {
         grid-area: 2 / 3 / 2 / 3;
-    }
+    } /* Image in Graduates page occupies the 2nd row and 3rd column only. */
     
     .squareWhite {
         grid-area: 3 / 1 / 3 / 1;
-    }
+    } /* Image in Graduates page occupies the 3rd row and 1st column only. */
     
     .squareMason {
         grid-area: 3 / 2 / 3 / 2;
-    }
+    } /* Image in Graduates page occupies the 3rd row and 2nd column only. */
     
     .squareCuteSmartDog {
         grid-area: 3 / 3 / 3 / 3;
-    }
+    } /* Image in Graduates page occupies the 3rd row and 3rd column only. */
     
     .wideFancy {
         grid-area: 4 / 1 / 4 / span 2;
-    }
+    } /* Image in Graduates page occupies the 4th row and 4th row only. Image occupies 4th column and spans for 2 more. */
     
     .wideDogHorde {
         grid-area: 5 / 1 / 5 / span 2;
-    }
+    } /* Image in Graduates page occupies the 5th row and 5th row only. Image occupies 1st column and spans for 2 more. */
     
     .longOrangeBooks {
         grid-area: 4 / 3 / span 2 / span 1;
-    }
+    } /* Image in Graduates page occupies the 4th row and 3rd column only. Image spans for 2 more rows and 1 more column respectively. */
     
     .squareHappyDog {
         grid-area: 6 / 2 / 6 / 2;
-    }
+    } /* Image in Graduates page occupies the 6th row and 2nd column only. */
     
-} /* Proper contrasting was used to decide which colors to pick and why. It does not make sense to pick two similar colors, as that can lead to end-users having a hard time deciphering the text. I used Coolors as a resource to help pick my colors, fine-tuning along the way so the five I picked could be the best possible choices. */}
+} /* Proper contrasting was used to decide which colors to pick and why. It does not make sense to pick two similar colors, as that can lead to end-users having a hard time deciphering the text. I used Coolors as a resource to help pick my colors, fine-tuning along the way so the five I picked could be the best possible choices. */
